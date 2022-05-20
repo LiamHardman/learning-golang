@@ -6,7 +6,7 @@
 This is:
 - A personal repo of mine, that I've made public to document learning my first proper programming language.
 
-## Eisting experience
+## Existing experience
 
 - I'm currently an AWS Cloud Engineer, and used to be both a Network and Linux Engineer. 
 - The closest things to progrmaming I've done before is Terraform relatively extensively (in HCL) , basic Python for my Raspberry Pi, and some YAML back in the day for MineCraft server plugins of all things.
