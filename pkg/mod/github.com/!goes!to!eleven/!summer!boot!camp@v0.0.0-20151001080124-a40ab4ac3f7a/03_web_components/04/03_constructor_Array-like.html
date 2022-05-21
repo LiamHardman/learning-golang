@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div class="foo">Hello</div>
+<div class="foo"> World</div>
+<div class="foo">!</div>
+
+<script>
+
+    // Alert each word from the .foo divs in a single string.  Use Array.forEach to iterate through each div.
+
+    var fooArrayLike = document.querySelectorAll('.foo');
+    console.log(fooArrayLike);
+    console.log(fooArrayLike[0]);
+    console.log(fooArrayLike[0].innerHTML);
+    console.log(fooArrayLike.constructor);
+    console.log(fooArrayLike.constructor === Array);
+//    fooArray is an array like myObject
+//    to make it an array ...
+    var fooArray = Array.prototype.slice.call(fooArrayLike);
+//    check that it is an array
+    console.log(fooArray);
+    console.log(fooArray[0]);
+    console.log(fooArray[0].innerHTML);
+    console.log(fooArray.constructor);
+    console.log(fooArray.constructor === Array);
+
+    var myStr = '';
+    fooArray.forEach(function(element) {
+//        console.log(element);
+        console.log(element.innerHTML);
+        myStr += element.innerHTML;
+    });
+    alert(myStr);
+
+</script>
+</body>
+</html>

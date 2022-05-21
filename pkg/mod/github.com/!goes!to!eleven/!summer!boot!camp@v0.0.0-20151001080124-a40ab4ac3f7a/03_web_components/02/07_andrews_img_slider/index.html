@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+
+<h2 id="slider">Slider</h2>
+
+<div class="my_slider">
+    <h1>Heading!</h1>
+    <img style="display: none" src="../../../images/01.jpeg" alt="Fresno, CA"/>
+    <img style="display: none" src="../../../images/02.jpeg" alt="Fresno, CA"/>
+    <img style="display: none" src="../../../images/03.jpeg" alt="Fresno, CA"/>
+    <img style="display: none" src="../../../images/04.jpeg" alt="Fresno, CA"/>
+    <img style="display: none" src="../../../images/05.jpeg" alt="Fresno, CA"/>
+</div>
+
+<script>
+    var sliderHost = document.querySelector('.my_slider');
+    var shadowRoot = sliderHost.createShadowRoot();
+    var images = sliderHost.querySelectorAll('img');
+    var imageCounter = 0;
+    shadowRoot.innerHTML += '<content select="h1"></content>';
+    shadowRoot.innerHTML += '<content select="img"></content>';
+    shadowRoot.innerHTML += '<style>::content img {width: 200px;}</style>';
+    window.setInterval(function () {
+        images[imageCounter].style.display = 'none';
+        if (imageCounter < images.length - 1) {
+            imageCounter++;
+        } else {
+            imageCounter = 0;
+        }
+        images[imageCounter].style.display = 'block';
+    }, 900);
+</script>
+
+</body>
+</html>

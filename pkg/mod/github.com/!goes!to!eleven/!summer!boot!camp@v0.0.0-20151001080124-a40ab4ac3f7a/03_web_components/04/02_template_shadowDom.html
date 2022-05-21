@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<template id="foo"><h1><em>Hello world</em></h1></template>
+<div class="content"><!-- Use JS to make the template content appear here! --></div>
+
+<script>
+
+    var shadowRoot = document.querySelector('.content').createShadowRoot();
+    var myTemplate = document.querySelector('#foo').content;
+    var myClone = document.importNode(myTemplate, true);
+    shadowRoot.appendChild(myClone);
+
+
+</script>
+
+</body>
+</html>

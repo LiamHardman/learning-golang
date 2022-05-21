@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<p>Today is Monday.</p>
+<div class="container"></div>
+
+<script>
+    var host = document.querySelector('.container');
+    var root = host.createShadowRoot();
+    root.innerHTML = '<p>How <em>you</em> doin?</p>'
+</script>
+
+</body>
+</html>

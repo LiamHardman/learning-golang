@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<my-blink>this blinks</my-blink>
+
+<script>
+    var proto = Object.create(HTMLElement.prototype);
+
+    proto.attachedCallback = function () {
+        var that = this;
+        this.timer = setInterval(function () {
+            if (that.style.visibility === 'visible') {
+                that.style.visibility = 'hidden';
+            } else {
+                that.style.visibility = 'visible';
+            }
+        }, 300)
+    };
+
+    proto.detachedCallback = function () {
+        clearInterval(this.timer);
+    }
+
+    document.registerElement('my-blink', {prototype: proto});
+
+</script>
+</body>
+</html>

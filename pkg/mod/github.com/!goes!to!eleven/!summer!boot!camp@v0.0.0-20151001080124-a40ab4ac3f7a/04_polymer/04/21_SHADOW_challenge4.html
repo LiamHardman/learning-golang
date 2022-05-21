@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>outside</h1>
+
+<template>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+
+    <h1>inside</h1>
+</template>
+
+<my-h1></my-h1>
+<my-h1></my-h1>
+<my-h1></my-h1>
+<script>
+    var proto = Object.create(HTMLElement.prototype);
+    var template = document.querySelector('template').content;
+    proto.attachedCallback = function() {
+        var clone = template.cloneNode(true);
+        var shadowRoot = this.createShadowRoot();
+        shadowRoot.appendChild(clone);
+    };
+    document.registerElement('my-h1',{prototype: proto});
+
+</script>
+</body>
+</html>

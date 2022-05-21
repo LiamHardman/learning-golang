@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>To Do</h1>
+<ol contenteditable>
+    <li></li>
+</ol>
+<input type="submit" value="clear">
+
+<script>
+
+    var ol = document.querySelector('ol');
+
+    ol.addEventListener('input', function(){
+        sessionStorage.setItem('todo', ol.innerHTML);
+    });
+
+    if(sessionStorage.getItem('todo')){
+        ol.innerHTML = sessionStorage.getItem('todo');
+    }
+
+</script>
+
+
+</body>
+</html>

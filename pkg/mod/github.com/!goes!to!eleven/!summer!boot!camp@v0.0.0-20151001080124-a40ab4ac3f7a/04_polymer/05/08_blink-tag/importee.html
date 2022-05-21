@@ -1,0 +1,23 @@
+
+<script>
+    var proto = Object.create(HTMLElement.prototype);
+
+    proto.attachedCallback = function () {
+        var that = this;
+        this.timeHandler = setInterval(function () {
+            if (that.style.visibility === 'visible') {
+                that.style.visibility = 'hidden';
+            } else {
+                that.style.visibility = 'visible';
+            }
+        }, 300);
+    };
+
+    proto.detachedCallback = function () {
+        clearInterval(this.timeHandler);
+    };
+
+    document.registerElement('my-blink', {prototype: proto});
+
+    //this.style.visibility = this.style.visibility === 'visible' ? 'hidden' : 'visible';
+</script>

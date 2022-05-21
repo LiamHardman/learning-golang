@@ -2,9 +2,7 @@
 
 ---
 ## What is this?
-
-This is:
-- A personal repo of mine, that I've made public to document learning my first proper programming language.
+A personal repo of mine, that I've made public to document learning my first proper programming language.
 
 ## Existing experience
 
@@ -18,5 +16,8 @@ This is:
 - Generating a universal set of binaries does sound quite attractive to me.
 - It seems a good mix of web-apps, desktop apps and infrastructure-related programs are being created here, so it is likely here to stay.
 
+**Resources Used**
+
+- Learn How To Code: Google's Go (golang) Programming Language - Todd McLeod on Udemy.
 
 ---
