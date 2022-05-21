@@ -1,7 +1,0 @@
-hold SHIFT and hover pointer over image to see image in code
-
-option shift arrow-up
-option shift arrow-down
-
-command shift arrow-up
-command shift arrow-down

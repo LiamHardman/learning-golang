@@ -1,3 +1,0 @@
-
-
-http://blog.golang.org/race-detector

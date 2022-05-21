@@ -1,3 +1,0 @@
-downloads a file:
-curl -O <url>
-
